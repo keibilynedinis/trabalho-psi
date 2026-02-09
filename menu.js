@@ -1,6 +1,6 @@
 // menu.js
 const readline = require("readline");
-const { calcular } = require("./cal"); 
+const { calcular } = require("./cal");  // importa o arquivo cal.js
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -13,6 +13,7 @@ rl.question("Digite o primeiro número: ", function(a) {
         let n1 = Number(a);
         let n2 = Number(b);
 
+        // Usa a função do cal.js para calcular
         const resultados = calcular(n1, n2);
 
         console.log("\nResultados:");
@@ -32,32 +33,3 @@ rl.question("Digite o primeiro número: ", function(a) {
         rl.close();
     });
 });
-
-// cal.js
-
-function calcular(n1, n2) {
-    let soma = n1 + n2;
-    let subtracao = n1 - n2;
-    let multiplicacao = n1 * n2;
-    let divisao = n1 / n2;
-    let resto = n1 % n2;
-    let potencia = n1 ** n2;
-    let raizA = Math.sqrt(n1);
-    let raizB = Math.sqrt(n2);
-    let porcentagem = (n1 * n2) / 100;
-
-    return {
-        soma,
-        subtracao,
-        multiplicacao,
-        divisao,
-        resto,
-        potencia,
-        raizA,
-        raizB,
-        porcentagem
-    };
-}
-
-// Exporta a função para poder usar em outro arquivo
-module.exports = { calcular };
