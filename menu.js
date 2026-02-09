@@ -1,6 +1,5 @@
-// menu.js
 const readline = require("readline");
-const { calcular } = require("./cal");  // importa o arquivo cal.js
+const { calcular } = require("./cal"); 
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -13,7 +12,6 @@ rl.question("Digite o primeiro número: ", function(a) {
         let n1 = Number(a);
         let n2 = Number(b);
 
-        // Usa a função do cal.js para calcular
         const resultados = calcular(n1, n2);
 
         console.log("\nResultados:");

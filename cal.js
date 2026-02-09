@@ -23,6 +23,4 @@ function calcular(n1, n2) {
         porcentagem
     };
 }
-
-// Exporta a função para poder usar em outro arquivo
 module.exports = { calcular };
